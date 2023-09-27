@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-end; */
+    flex-direction: column;
+    height: 100vh;
+    background-color: #030a1b;
+    perspective: 40rem;
+}
+.title {
+    margin-bottom: 40px;
+    font-size: 5rem;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    /* left:50%; */
+}
+
+ .menu{
+    width:100%;
+    padding:0 25rem; 
+    display:flex;
+    justify-content:space-evenly; 
+    transform-style: preserve-3d;
+} 
+
+.change.menu .menu-item{
+    transform:rotateY(0) rotateX(0) translateX(0) translateY(0) translateZ(0);
+    opacity:1;
+}
+
+.menu-item{
+    width:20rem;
+    height:15rem;
+    background-color: #db222a;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    cursor:pointer;
+    box-shadow: 0 0 2rem rgba(208, 0, 0, 1);
+    
+}
+
+.menu-item:hover{
+    background-color: #ab2836;
+    box-shadow: 0 0 3rem rgba(208, 0, 0, 1);
+}
+
+.menu-item:not(.center-item){
+opacity:0;
+}
+
+.menu-item:nth-child(1){
+    transform: rotateY(-70deg) rotateX(20deg) translateX(-50rem) translateY(-15rem) translateZ(-50rem);
+    transition: transform 1.2s ease-in, opacity 1s ease-in background-color .5s, box-shadow .5s;
+}
+
+.menu-item:nth-child(2){
+    transform: rotateY(-70deg) rotateX(20deg) translateX(-20rem) translateY(-5rem) translateZ(-20rem);
+    transition: transform 1s ease-in, opacity 1s ease-in background-color .5s, box-shadow .5s;
+}
+
+.menu-item:nth-child(3){
+    transform: rotateX(20deg);
+    transition: transform 1s ease-in background-color .5s, box-shadow .5s;
+}
+
+.menu-item:nth-child(4){
+    transform: rotateY(70deg) rotateX(20deg) translateX(20rem) translateY(-5rem) translateZ(-20rem);
+    transition: transform 1s ease-in, opacity 1s ease-in background-color .5s, box-shadow .5s;
+}
+
+.menu-item:nth-child(5){
+    transform: rotateY(70deg) rotateX(20deg) translateX(50rem) translateY(-15rem) translateZ(-50rem);
+    transition: transform 1.2s ease-in, opacity 1s ease-in background-color .5s, box-shadow .5s;
+}
+
+.menu-item i{
+    font-size: 7rem;
+    color:white;
+    transition: color .5s;
+}
+
+.menu-item:hover i{
+    color:grey;
+}
+
+
+
